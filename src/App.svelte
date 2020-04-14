@@ -1,10 +1,15 @@
 <script>
-	export let name;
+	let name = `Bean`;
+	let belt = `Black`;
+	const changeColor = () => {
+		belt = `Green`;
+	}
 </script>
 
 <main>
 	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+	<p>Belt color: {belt}</p>
+	<button on:click="{changeColor}">Change Color</button>
 </main>
 
 <style>
